@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 export default function Home() {
-  const [openIndex, setOpenIndex] = useState(0);
-  const [openBgIndex, setOpenBgIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
+  const [openBgIndex, setOpenBgIndex] = useState(null);
 
   // For Faqs
   const faqs = [
@@ -57,16 +57,18 @@ export default function Home() {
           </nav>
         </header>
         {/* Hero */}
-        <section className="mt-16">
+        <section className="mt-16 ">
           <div className="max-w-8xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-20">
               {/* Left: Image */}
-              <div className="overflow-hidden rounded-t-[300px]">
-                <img
-                  src="https://images.squarespace-cdn.com/content/v1/65d10c6adcfabe1819ed4e07/08197a74-c045-4a19-a7c9-0f85c1032bc4/daiga-ellaby-M2P08N9zi2k-unsplash.jpg?format=2500w"
-                  alt="Flowers"
-                  className="w-full h-[700px] object-cover"
-                />
+              <div className="flex justify-center">
+                <div className="overflow-hidden  rounded-t-full">
+                  <img
+                    src="https://images.squarespace-cdn.com/content/v1/65d10c6adcfabe1819ed4e07/08197a74-c045-4a19-a7c9-0f85c1032bc4/daiga-ellaby-M2P08N9zi2k-unsplash.jpg?format=2500w"
+                    alt="Flowers"
+                    className="w-full max-w-[900px] h-[900px]  object-cover"
+                  />
+                </div>
               </div>
 
               {/* Right: Text */}
@@ -82,7 +84,10 @@ export default function Home() {
 
                 <a
                   href="#"
-                  className="inline-block mt-10 border px-8 py-4 text-sm"
+                  className="inline-block mt-10 border px-8 py-4 tracking-wide
+                 transition-all duration-300 ease-in-out
+                  hover:bg-[#243a1a]
+                  hover:text-white text-sm"
                 >
                   CONNECT WITH ME →
                 </a>
@@ -92,7 +97,7 @@ export default function Home() {
         </section>
 
         {/* Live a fulfilling life */}
-        <section className="mt-5">
+        <section>
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* LEFT PANEL */}
             <div className="bg-[#ede8df] flex flex-col">
@@ -121,7 +126,7 @@ export default function Home() {
                     text-center
                     text-sm
                     tracking-wide
-                    transition-colors
+                   transition-all duration-300 ease-in-out
                     hover:bg-[#243a1a]
                     hover:text-white
                   "
@@ -259,7 +264,7 @@ export default function Home() {
                   text-center
                   text-sm
                   tracking-wide
-                  transition-colors
+                 transition-all duration-300 ease-in-out
                   hover:bg-[#243a1a]
                   hover:text-white
                 "
@@ -297,7 +302,7 @@ export default function Home() {
                 py-4
                 text-sm
                 tracking-wide
-                transition-colors
+                transition-all duration-300 ease-in-out
                 hover:bg-[#243a1a]
                 hover:text-white
               "
@@ -329,7 +334,7 @@ export default function Home() {
         </section>
 
         {/* FAQ Section */}
-        <section className="mt-32 w-full mb-32">
+        <section className="mt-32 w-full ">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 px-10 lg:px-20 items-start">
             {/* LEFT IMAGE */}
             <div className="flex justify-center">
@@ -365,11 +370,15 @@ export default function Home() {
                       </button>
 
                       {/* Answer */}
-                      {isOpen && (
-                        <p className="mt-4 ml-8 text-base max-w-lg">
+                      <div
+                        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                          isOpen ? "max-h-40 opacity-100 " : "max-h-0 opacity-0"
+                        }`}
+                      >
+                        <p className="mt-4 ml-8 text-base leading-relaxed max-w-lg">
                           {faq.answer}
                         </p>
-                      )}
+                      </div>
 
                       <div className="border-t mt-6" />
                     </div>
@@ -380,26 +389,54 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Professional Background  Section*/}
-        <section className="bg-[#ede8df]  py-20">
-          <div className="max-w-3xl  mx-auto px-6">
-            <h2 className="text-4xl text-center font-light">
-              My Professional Background
-            </h2>
-            <div className="border-t mt-10"></div>
+        {/* Professional Background Section */}
+        <section className="bg-[#ede8df] mt-24 py-22">
+          <div className="grid grid-cols-[1fr_minmax(0,580px)_1fr]">
+            <div className="col-start-2 px-6">
+              <h2 className="text-4xl text-center font-light">
+                My Professional Background
+              </h2>
 
-            {/* Accordion */}
-            <div className="space-y-6">
-              {backgroundItems.map((item, index) => {
-                const isOpen = openBgIndex === index;
+              {/* Divider */}
+              <div className="border-t mt-10"></div>
 
-                return (
-                  <div key={index}>
-                    {/* Title Row */}
-                    <button >{backgroundItems.title}</button>
-                  </div>
-                );
-              })}
+              {/* Accordion */}
+              <div>
+                {backgroundItems.map((item, index) => {
+                  const isOpen = openBgIndex === index;
+
+                  return (
+                    <div key={index} className="pt-4">
+                      {index !== 0 && <div className="border-t mb-5"></div>}
+
+                      {/* Title Row */}
+                      <button
+                        onClick={() =>
+                          setOpenBgIndex(openBgIndex === index ? null : index)
+                        }
+                        className="w-full flex justify-between items-center text-xl font-medium text-left"
+                      >
+                        <span>{item.title}</span>
+                        <span className="text-2xl">{isOpen ? "−" : "+"}</span>
+                      </button>
+
+                      {/* Content */}
+                      <div
+                        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                          isOpen
+                            ? "max-h-40 opacity-100 mt-4"
+                            : "max-h-0 opacity-0"
+                        }`}
+                      >
+                        <p className="text-base font-light leading-relaxed max-w-xl ml-18 pb-4">
+                          {item.content}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="border-t mt-4"></div>
             </div>
           </div>
         </section>
