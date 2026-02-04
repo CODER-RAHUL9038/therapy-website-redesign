@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function AloneSupport() {
+export default function SupportSection () {
   return (
     <section className="mt-20 w-full">
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full">

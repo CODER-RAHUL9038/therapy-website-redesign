@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function AboutLilac() {
+export default function AboutDrMaya () {
   return (
     <section className="w-full bg-[#ede8df]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center px-10 pt-24 pb-40 lg:px-20">

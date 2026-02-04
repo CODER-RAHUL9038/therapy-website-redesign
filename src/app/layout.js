@@ -1,15 +1,16 @@
 import Header from "@/components/Header";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Playfair_Display, Inter } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfair = Playfair_Display({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-playfair",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata = {
@@ -21,9 +22,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-white text-slate-900 antialiased`}
+        className={`${inter.variable} ${playfair.variable} font-sans bg-white text-slate-900 antialiased`}
       >
-         <Header />
+        <Header />
         {children}
       </body>
     </html>

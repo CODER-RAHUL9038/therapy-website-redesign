@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Specialities() {
+export default function AreasOfFocus () {
   return (
     <section className="mt-28">
       <div className="max-w-[1400px] mx-auto px-8">

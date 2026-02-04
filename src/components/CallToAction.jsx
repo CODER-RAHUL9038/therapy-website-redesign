@@ -1,6 +1,6 @@
 "use client";
 
-export default function GetStarted() {
+export default function CallToAction () {
   return (
     <section className="bg-[#7a7a43] py-28 text-center">
       <h2 className="text-4xl font-light text-white">

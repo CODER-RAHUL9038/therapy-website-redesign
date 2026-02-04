@@ -1,13 +1,13 @@
 "use client";
 
 import Hero from "@/components/Hero";
-import FulfillingLife from "@/components/FulfillingLife";
-import Specialities from "@/components/Specialities";
-import AloneSupport from "@/components/AloneSupport";
-import AboutLilac from "@/components/AboutLilac";
+import TherapyOverview from "@/components/TherapyOverview";
+import AreasOfFocus from "@/components/AreasOfFocus";
+import SupportSection from "@/components/SupportSection";
+import AboutDrMaya from "@/components/AboutDrMaya";
 import FaqSection from "@/components/FaqSection";
 import ProfessionalBackground from "@/components/ProfessionalBackground";
-import GetStarted from "@/components/GetStarted";
+import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,13 +15,13 @@ export default function Home() {
     <main className="min-h-screen">
       <>
         <Hero />
-        <FulfillingLife />
-        <Specialities />
-        <AloneSupport />
-        <AboutLilac />
+        <TherapyOverview />
+        <AreasOfFocus />
+        <SupportSection />
+        <AboutDrMaya />
         <FaqSection />
         <ProfessionalBackground />
-        <GetStarted />
+        <CallToAction />
         <Footer />
       </>
     </main>
