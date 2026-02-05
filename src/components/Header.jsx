@@ -8,8 +8,8 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="w-full bg-[#DDEBEC] relative z-50">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
+      <header className=" bg-[#DDEBEC] relative z-50">
+        <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex items-center justify-between py-4 ">
             {/* Hamburger / Close Button (Mobile) */}
             <button
@@ -21,17 +21,23 @@ export default function Header() {
               {open ? "✕" : "☰"}
             </button>
 
-            {/* Logo (centered on mobile) */}
+            {/* Logo on mobile */}
             <div className=" text-xl font-serif sm:text-2xl lg:text-3xl font-semibold text-[#163A3C] mr-6">
               Lilac Template
             </div>
 
-            {/* Desktop Navigation */}
+            {/*  Navigation hidden on small screen */}
             <nav className="hidden sm:flex  gap-6 lg:gap-8 text-base lg:text-xl">
-              <a className="text-[#163A3C] font-serif hover:text-[#2F6F73]" href="#">
+              <a
+                className="text-[#163A3C] font-serif hover:text-[#2F6F73]"
+                href="#"
+              >
                 Blog
               </a>
-              <a className="text-[#163A3C] font-serif hover:text-[#2F6F73]" href="#">
+              <a
+                className="text-[#163A3C] font-serif hover:text-[#2F6F73]"
+                href="#"
+              >
                 Contact
               </a>
             </nav>
@@ -42,10 +48,10 @@ export default function Header() {
       {/* Mobile Fullscreen Menu */}
 
       <div
-        className={`fixed inset-0 bg-[#DDEBEC] z-40 flex flex-col items-center justify-center gap-15 text-5xl  sm:hidden  transition-all duration-500 ease-in-out ${
+        className={`fixed inset-0 bg-[#DDEBEC] z-40 flex flex-col items-center justify-center gap-15 text-5xl  sm:hidden  transition-all duration-700 ease-in-out ${
           open
             ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 translate-y-6 pointer-events-none"
+            : "opacity-0 translate-y-10 pointer-events-none"
         }`}
       >
         <a href="#" className="text-[#163A3C] hover:text-[#2F6F73]">

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="pt-8 pb-25 bg-[#DDEBEC]">
+    <section className="pt-5 pb-25 bg-[#DDEBEC]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-24">
           {/* IMAGE */}
@@ -22,8 +22,8 @@ export default function Hero() {
           </div>
 
           {/* TEXT */}
-          <div className="text-center lg:text-left order-2">
-            <h1 className="text-[24px] sm:text-4xl md:text-[40px]   lg:text-5xl font-semibold font-serif font-light leading-snug ">
+          <div className="text-center  lg:text-left order-2">
+            <h1 className="text-[24px]  sm:text-4xl md:text-[40px]  lg:text-5xl font-semibold font-serif font-light leading-snug ">
               Anxiety & Trauma Therapy for Adults in Santa Monica, CA
             </h1>
 
@@ -37,7 +37,7 @@ export default function Hero() {
               href="#"
               className="
                 inline-block
-                mt-8 sm:mt-10
+                mt-8 sm:mt-5
                 border
                 border-[#1E3D3A]
                 px-6 sm:px-8
