@@ -63,7 +63,7 @@ export default function AboutDrMaya() {
           </div>
 
           {/* Small circular overlay */}
-          <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/4 w-[150px] h-[150px]  md:w-[180px] md:h-[180px] lg:w-[280px] lg:h-[280px] rounded-full overflow-hidden">
+          <div className="absolute bottom-0 right-0 translate-x-1/6 translate-y-1/4 w-[150px] h-[150px]  md:w-[180px] md:h-[180px] lg:w-[280px] lg:h-[280px] rounded-full overflow-hidden">
             <Image
               src="https://images.squarespace-cdn.com/content/v1/65d10c6adcfabe1819ed4e07/9f889e1b-ba2b-4a6d-92e9-767dd3db67ae/lilac+template+white+lilac.jpeg?format=2500w"
               alt="Soft brand detail"
