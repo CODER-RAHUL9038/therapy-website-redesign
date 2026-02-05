@@ -2,18 +2,18 @@
 
 import Image from "next/image";
 
-export default function AboutDrMaya () {
+export default function AboutDrMaya() {
   return (
-    <section className="w-full bg-[#ede8df]">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center px-10 pt-24 pb-40 lg:px-20">
+    <section className="w-full bg-[#EEECE6]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-10 py-12  md:py-64 lg:pt-24 pb-40 lg:px-20">
         {/* LEFT: TEXT */}
-        <div className="max-w-xl">
-          <h2 className="text-4xl font-light">
-            Hi, I’m Dr. Maya Reynolds, PsyD
+        <div className="max-w-xl order-2 md:order-1">
+          <h2 className="text-4xl  font-serif font-light mt-10 md:mt-16 text-[#1F2D2B]">
+            Hi, I&apos;m Dr. Maya Reynolds, PsyD
           </h2>
 
-          <p className="mt-8 text-base leading-relaxed">
-            I’m a licensed clinical psychologist based in Santa Monica,
+          <p className="mt-8 text-lg leading-relaxed text-[#5F7370] ">
+            I&apos;m a licensed clinical psychologist based in Santa Monica,
             California. I work with adults who feel overwhelmed by anxiety,
             chronic stress, or the lingering effects of past experiences—even
             when they appear high-functioning on the outside. My approach is
@@ -26,16 +26,22 @@ export default function AboutDrMaya () {
             href="#"
             className="
               inline-block
-              mt-12
-              ml-0 lg:ml-40
+              lg:mt-12
+              mt-10
+              md:mt-10
+              ml-20 md:ml-30 lg:ml-40
               border
-              border-slate-700
+              border-[#1E3D3A]
               px-8
               py-4
               text-sm
               tracking-wide
-              transition-all duration-700 ease-in-out
-              hover:bg-[#243a1a]
+              font-serif
+              text-[#1E3D3A]
+              transition-all
+              duration-700
+              ease-in-out
+              hover:bg-[#1E3D3A]
               hover:text-white
             "
           >
@@ -44,12 +50,12 @@ export default function AboutDrMaya () {
         </div>
 
         {/* RIGHT: IMAGE COMPOSITION */}
-        <div className="relative flex justify-center">
+        <div className="relative  flex justify-center mx-auto order-1 md:order-2 max-w-[180px]  md:max-w-[400px]  lg:max-w-[550px]">
           {/* Large arched image */}
           <div className="overflow-hidden rounded-t-full">
             <Image
               src="https://images.squarespace-cdn.com/content/v1/65d10c6adcfabe1819ed4e07/9a77a6f2-1c50-4582-a5c1-5ec0dc2e94e8/daiga-ellaby-Ct6LBZHaOSc-unsplash.jpg?format=2500w"
-              alt="Lilac bouquet"
+              alt="Calm floral arrangement"
               width={400}
               height={600}
               className="object-cover"
@@ -57,13 +63,12 @@ export default function AboutDrMaya () {
           </div>
 
           {/* Small circular overlay */}
-          <div className="absolute bottom-0 right-0  translate-x-1/6 translate-y-1/4  w-[280px] h-[280px] rounded-full overflow-hidden">
+          <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/4 w-[150px] h-[150px]  md:w-[180px] md:h-[180px] lg:w-[280px] lg:h-[280px] rounded-full overflow-hidden">
             <Image
               src="https://images.squarespace-cdn.com/content/v1/65d10c6adcfabe1819ed4e07/9f889e1b-ba2b-4a6d-92e9-767dd3db67ae/lilac+template+white+lilac.jpeg?format=2500w"
-              alt="Lilac brand detail"
-             fill
-              
-              className=" object-cover"
+              alt="Soft brand detail"
+              fill
+              className="object-cover"
             />
           </div>
         </div>

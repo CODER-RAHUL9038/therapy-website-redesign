@@ -4,23 +4,23 @@ import Image from "next/image";
 
 export default function TherapyOverview() {
   return (
-    <section>
+    <section className="bg-[#EEECE6]">
       <div className="grid grid-cols-1 md:grid-cols-2 mt-5">
         {/* LEFT PANEL */}
-        <div className="bg-[#EEECE6] flex flex-col order-2 md:order-1">
+        <div className=" flex flex-col order-2 md:order-1">
           {/* Text content */}
           <div className="px-8 pt-8 lg:px-16 py-12  lg:py-16 flex-1">
             <h2 className="text-3xl md:text-[35px] lg:text-4xl font-semibold font-serif text-[#1F2D2B] leading-snug">
               Therapy for Anxiety, Trauma, and Burnout
             </h2>
 
-            <p className="mt-10 text-base max-w-lg text-lg text-[#5F7370] font-sans">
+            <p className="mt-10  max-w-lg text-lg text-[#5F7370] font-sans">
               Many of the people I work with are thoughtful, capable, and driven
               — yet internally feel exhausted by constant worry, tension, or
               emotional pressure.
             </p>
 
-            <p className="mt-8 text-base max-w-lg text-lg text-[#5F7370]">
+            <p className="mt-8  max-w-lg text-lg text-[#5F7370]">
               Therapy can help you slow down, understand what your nervous
               system is responding to, and develop more sustainable ways of
               living and working.
