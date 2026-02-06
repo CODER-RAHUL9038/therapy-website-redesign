@@ -9,6 +9,7 @@ import FaqSection from "@/components/FaqSection";
 import ProfessionalBackground from "@/components/ProfessionalBackground";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import OurOffice from "@/components/OurOffice";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <AreasOfFocus />
         <SupportSection />
         <AboutDrMaya />
+        <OurOffice />
         <FaqSection />
         <ProfessionalBackground />
         <CallToAction />

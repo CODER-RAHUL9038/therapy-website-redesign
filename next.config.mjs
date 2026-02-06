@@ -11,6 +11,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.squarespace-cdn.com",
       },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "media.istockphoto.com",
+      },
     ],
   },
 };
