@@ -46,7 +46,6 @@ export default function Header() {
         <FadeUp delay={150}>
           <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-10">
             <div className="flex items-center justify-between py-4">
-
               {/* Hamburger */}
               <button
                 aria-label="Toggle menu"
@@ -64,14 +63,19 @@ export default function Header() {
 
               {/* Desktop Nav */}
               <nav className="hidden lg:flex gap-6 lg:gap-8 text-base lg:text-xl">
-                <a className="text-[#163A3C] font-serif hover:text-[#2F6F73]" href="#">
+                <a
+                  className="text-[#163A3C] font-serif hover:text-[#2F6F73]"
+                  href="#"
+                >
                   Blog
                 </a>
-                <a className="text-[#163A3C] font-serif hover:text-[#2F6F73]" href="#">
+                <a
+                  className="text-[#163A3C] font-serif hover:text-[#2F6F73]"
+                  href="#"
+                >
                   Contact
                 </a>
               </nav>
-
             </div>
           </div>
         </FadeUp>
